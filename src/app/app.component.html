@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora el Mundo del Manga</title>
+
+    <!-- Cargar temas y estilos de PrimeNG -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/themes/lara-light-indigo/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/primeng.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeicons@6.0.0/primeicons.css">
+
+    <!-- Estilos personalizados para manga -->
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #ff7f50, #ff6347);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #ff6347;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: justify;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .p-card {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .p-card img {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .p-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+        }
+
+        .carousel-container {
+            margin-top: 50px;
+        }
+
+        .carousel-item img {
+            border-radius: 15px;
+            width: 100%;
+            height: auto;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff6347;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #e55347;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>¡Bienvenidos al Mundo del Manga!</h1>
+    </header>
+
+    <div class="content">
+        <h2 class="section-title">Descubre el Universo de los Mangas</h2>
+        <p>El manga es una forma de cómic originaria de Japón, conocida por su estilo único y su influencia cultural a nivel mundial. Desde historias de acción épica hasta romances conmovedores, el manga tiene algo para todos.</p>
+
+        <p class="highlight-text">Sumérgete en las historias de tus personajes favoritos y explora el fascinante mundo de las series más populares del momento.</p>
+    </div>
+
+    <div class="card-container">
+        <!-- Card 1: Historia del Manga -->
+        <p-card header="Historia del Manga" subheader="Un Viaje A través del Tiempo" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Historia del Manga" src="https://blog.jefsescritor.com/wp-content/uploads/2023/10/mangas-1.webp" />
+            </ng-template>
+            <p class="texto">
+                El manga comenzó en el siglo XIX en Japón, pero fue en el siglo XX cuando se consolidó como una forma de entretenimiento masiva. Hoy en día, el manga es un fenómeno global que ha influido en películas, series y videojuegos.
+            </p>
+            <ng-template pTemplate="footer">
+                <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
+                    <p-button label="Leer Más" severity="info" />
+                </div>
+            </ng-template>
+        </p-card>
+
+        <!-- Card 2: Géneros del Manga -->
+        <p-card header="Géneros del Manga" subheader="Desde Acción hasta Romance" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Géneros de Manga" src="https://ap-cdn.sfo3.digitaloceanspaces.com/uploads/2023/05/libros-manga-para-adolescentes-recomendaciones.jpg" />
+            </ng-template>
+            <p class="texto">
+                El manga se clasifica en diversos géneros, como shonen, shojo, seinen y josei. Cada género tiene su propio público objetivo y características, lo que hace que el manga sea diverso y atractivo para todas las edades.
+            </p>
+            <ng-template pTemplate="footer">
+                <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
+                    <p-button label="Descubrir Géneros" severity="info" />
+                </div>
+            </ng-template>
+        </p-card>
+
+        <!-- Card 3: El Impacto Global del Manga -->
+        <p-card header="El Impacto Global del Manga" subheader="De Japón al Mundo" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Impacto Global del Manga" src="https://a.storyblok.com/f/112937/568x464/2f8a156bb9/manga_learn_japanese_hero.jpg/m/620x0/filters:quality(70)/" />
+            </ng-template>
+            <p class="texto">
+                El manga ha trascendido las fronteras de Japón, convirtiéndose en una parte fundamental de la cultura pop mundial. Desde convenciones hasta adaptaciones cinematográficas, el manga sigue ganando popularidad en todo el mundo.
+            </p>
+            <ng-template pTemplate="footer">
+                <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
+                    <p-button label="Ver Más" severity="info" />
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+
+    <div class="card-container">
+        <!-- Additional Manga Cards -->
+        <p-card header="Naruto" subheader="Un Ninja en Busca de Su Sueño" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Naruto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRg3nBXfcXf5OerjtUJE3Pn4Zchj1Grw8k8A&s" />
+            </ng-template>
+        </p-card>
+
+        <p-card header="Sailor Moon" subheader="El Poder de la Luna" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Sailor Moon" src="https://m.media-amazon.com/images/I/71fD6iqykdL._AC_UF1000,1000_QL80_.jpg" />
+            </ng-template>
+        </p-card>
+
+        <p-card header="One Piece" subheader="La Aventura Más Grande del Mundo" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="One Piece" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJjOEEEgAuRFainKVGwoUh9m_Lj77BEWds9g&s" />
+            </ng-template>
+        </p-card>
+
+        <p-card header="Attack on Titan" subheader="Humanos Contra Titanes" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Attack on Titan" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLf82J5fzWON14kSQOJ0hnEp6rGN275haimg&s" />
+            </ng-template>
+        </p-card>
+
+        <p-card header="Fruits Basket" subheader="Un Romance Sobrenatural" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Fruits Basket" src="https://images.cdn2.buscalibre.com/fit-in/360x360/6f/d8/6fd87e8353ac49d788a1e70d7a94d32c.jpg" />
+            </ng-template>
+        </p-card>
+
+        <p-card header="Berserk" subheader="La Oscuridad del Medioevo" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Berserk" src="https://images-cdn.ubuy.com.sa/65a4414e942baa1dc95d7995-berserk-vol-1-paperback-november.jpg" />
+            </ng-template>
+        </p-card>
+
+        <p-card header="My Hero Academia" subheader="Héroes y Villanos" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="My Hero Academia" src="https://jumpg-assets.tokyo-cdn.com/secure/title/200019/title_thumbnail_portrait_list/313270.jpg?hash=gzln6PVvT8IDCPWIgMEb5g&expires=2145884400" />
+            </ng-template>
+        </p-card>
+
+        <p-card header="Slam Dunk" subheader="Baloncesto y Amistad" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Slam Dunk" src="https://upload.wikimedia.org/wikipedia/en/f/f7/Slam_Dunk_%28manga%29_1.png" />
+            </ng-template>
+        </p-card>
+
+        <p-card header="Vagabond" subheader="Samuráis y Honor" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Vagabond" src="https://images.cdn3.buscalibre.com/fit-in/360x360/99/ab/99abd0ddadf9e9e30969b6e246fc3dc4.jpg" />
+            </ng-template>
+        </p-card>
+
+        <p-card header="JoJo's Bizarre Adventure" subheader="Aventuras Extrañas y Poderes Sobrenaturales" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="JoJo's Bizarre Adventure" src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421590653/jojos-bizarre-adventure-part-3-stardust-crusaders-vol-1-9781421590653_hr.jpg" />
+            </ng-template>
+        </p-card>
+    </div>
+
+    <div class="carousel-container">
+        <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions" 
+                    [circular]="true" [autoplay]="true" [autoplayInterval]="3000">
+            <ng-template pTemplate="item" let-item>
+                <div class="carousel-item">
+                    <img [src]="item" alt="Imagen de Manga" />
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+
+    <div class="form-container">
+        <h2>Únete a la Comunidad Manga</h2>
+        <form>
+            <div class="form-group">
+                <label for="firstName">Nombre:</label>
+                <input type="text" id="firstName" placeholder="Ingresa tu nombre" />
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Apellidos:</label>
+                <input type="text" id="lastName" placeholder="Ingresa tus apellidos" />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" placeholder="Ingresa tu correo electrónico" />
+            </div>
+
+            <div class="form-group">
+                <label for="genre">Género de Manga Favorito:</label>
+                <select id="genre">
+                    <option value="">Selecciona un género</option>
+                    <option value="shonen">Shonen</option>
+                    <option value="shojo">Shojo</option>
+                    <option value="seinen">Seinen</option>
+                    <option value="josei">Josei</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="gif-container" style="text-align: center; margin-top: 20px;">
+        <img src="https://i.giphy.com/zbEi5bn1hM2D0HMgNG.webp" alt="GIF de Manga" style="max-width: 100%; height: auto;" />
+    </div>
+    
+    <script>
+        const images = [
+            'https://upload.wikimedia.org/wikipedia/commons/a/a5/Polar_bear_and_her_cub.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/7/73/Polar_bear_in_churchill.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/e/ec/Polar_Bear_Cub.jpg'
+        ];
+
+        const responsiveOptions = [
+            { breakpoint: '1024px', numVisible: 3, numScroll: 1 },
+            { breakpoint: '768px', numVisible: 2, numScroll: 1 },
+            { breakpoint: '480px', numVisible: 1, numScroll: 1 }
+        ];
+        
+    </script>
+</body>
+
+</html>
